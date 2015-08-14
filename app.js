@@ -37,7 +37,7 @@ app.get("/contact", function(req,res){
 	res.render('contact.html',{title:'John'});
 });
 
-app.get("/contact/:name?", function(req,res){
+app.get("/contact/:name?/:numb?", function(req,res){
 	var name = req.params.name;
 	res.render('contact.html',{title:name})
 })
