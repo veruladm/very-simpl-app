@@ -7,10 +7,6 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
-<<<<<<< HEAD
-var cfenv = require('cfenv');
-=======
->>>>>>> 463496743fcd1a7af030d86a4e5cc3397f953afb
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
@@ -19,7 +15,6 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-<<<<<<< HEAD
 app.engine('html',require('ejs').renderFile);
 
 // serve the files out of ./public as our main files
@@ -51,11 +46,6 @@ app.get("*", function(req,res){
 	res.send("Bad Route");
 })
 
-=======
-// serve the files out of ./public as our main files
-app.use(express.static(__dirname + '/public'));
-
->>>>>>> 463496743fcd1a7af030d86a4e5cc3397f953afb
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
